@@ -1,13 +1,18 @@
+import useScrollReveal from '../hooks/useScrollReveal'
 function Contact() {
+  const [ref, isVisible] = useScrollReveal()
   return (
-    <section id="contact" style={{
-      minHeight: '50vh',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '80px 40px',
-      borderTop: '1px solid rgba(0, 255, 255, 0.1)',
-    }}>
+    <section id="contact" ref={ref} style={{
+            minHeight: '60vh',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '80px 40px',
+            borderTop: '1px solid rgba(0, 255, 255, 0.1)',
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
+            transition: 'opacity 0.7s ease, transform 0.7s ease',
+        }}>
       <div style={{ maxWidth: '800px', width: '100%', textAlign: 'center' }}>
 
         <p style={{

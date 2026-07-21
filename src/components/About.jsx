@@ -1,13 +1,20 @@
+import useScrollReveal from '../hooks/useScrollReveal'
 function About() {
+   const [ref, isVisible] = useScrollReveal()
+
   return (
-    <section id="about" style={{
-      minHeight: '60vh',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '80px 40px',
-      borderTop: '1px solid rgba(0, 255, 255, 0.1)',
-    }}>
+    
+     <section id="about" ref={ref} style={{
+            minHeight: '60vh',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '80px 40px',
+            borderTop: '1px solid rgba(0, 255, 255, 0.1)',
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
+            transition: 'opacity 0.7s ease, transform 0.7s ease',
+        }}>
       <div style={{ maxWidth: '800px', width: '100%' }}>
 
         <p style={{

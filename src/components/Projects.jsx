@@ -4,14 +4,14 @@ function Projects() {
     const [ref, isVisible] = useScrollReveal()
 
     const projects = [
-        {
-            title: 'DevJourney',
-            description: 'A full stack job application tracker with AI-powered skill-gap analysis. Paste any job posting and get an instant fit score, matched/missing skills, and honest advice via Groq/Llama integration. Currently being containerized with Docker and Kubernetes for cloud deployment.',
-            tech: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Groq AI', 'Docker'],
-            live: null,
-            github: 'https://github.com/vincentevangelista529/devjourney',
-            status: 'In Progress'
-        },
+       {
+    title: 'DevJourney',
+    description: 'A full stack job application tracker with AI-powered skill-gap analysis. Paste any job posting and get an instant fit score, matched/missing skills, and honest advice via Groq/Llama integration. Containerized with Docker and deployed live across Vercel, Render, and Neon PostgreSQL.',
+    tech: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Groq AI', 'Docker'],
+    live: 'https://devjourney-psi.vercel.app',
+    github: 'https://github.com/vincentevangelista529/devjourney',
+    status: 'Completed'
+},
         {
             title: 'CSE Reviewer App',
             description: 'A full stack Civil Service Exam reviewer with role-based JWT authentication, an Admin panel with regex-based question importer, and a PostgreSQL database. Deployed on Vercel and Render.',

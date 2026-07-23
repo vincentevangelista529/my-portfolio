@@ -178,7 +178,7 @@ function Projects() {
                                             paddingBottom: '2px'
                                         }}
                                     >
-                                        Live Demo(but free database server expired) ↗
+                                        Live Demo↗
                                     </a>
                                 )}
                                 {project.github && (
